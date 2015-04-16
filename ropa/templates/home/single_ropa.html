@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	ropa
+{% endblock %}
+
+{% block content %}
+	<h3>Ropa seleccionada</h3>
+	<h2>{{ ropa.marca }}  {{ ropa.descripcion }}</h2>
+	<br>
+	
+
+	{% if ropa.imagen %}
+	<img src="/media/{{ ropa.imagen }}" width ="500px" heigth ="500px">
+	{% endif %}
+	<br>
+	<p><b>Nombre:   </b>{{ ropa.nombre }} </p>
+	<p><b>Marca:    </b>{{ ropa.marca }}</p>
+	<p><b>Descripcion:    </b>{{ ropa.descripcion }} </p>
+	<br>
+	<a href ="/ropas/page/1">Mostrar lista de Productos</a>
+{% endblock %}
