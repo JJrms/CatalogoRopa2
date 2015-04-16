@@ -13,4 +13,5 @@ urlpatterns = patterns('',
     url(r'^',include('ropa.apps.ventas.urls')),
     url(r'^media/(?P<path>.*)$','django.views.static.serve',{'document_root':settings.MEDIA_ROOT}),
     url(r'^',include('ropa.apps.webservices.ws_productos.urls')),
+    url(r'^static/(?P<path>.*)$','django.views.static.serve',{'document_root':settings.STATIC_ROOT}),
 )
